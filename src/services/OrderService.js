@@ -90,7 +90,6 @@ class OrderService {
     // Favorite section
 
     static async addToFav(id) {
-        let order = this.getOrder()
 
         await fetch(`http://localhost:7000/products/${id}`)
         .then((res) => res.json())

@@ -7,6 +7,7 @@ import Menu from './pages/Menu'
 import Order from './pages/Order'
 import Checkout from './pages/Checkout'
 import Navbar from './components/Navbar'
+import { RequireAuth } from 'react-auth-kit';
 
 function App() {
   return (
@@ -21,19 +22,33 @@ function App() {
 
         <Route
         path="/landing"
-        element={<Landing/>}/>
+        element={
+        <RequireAuth loginPath="/">
+          <Landing/>
+        </RequireAuth>}/>
 
         <Route
         path="/menu"
-        element={<Menu/>}/>
+        element={
+          <RequireAuth loginPath="/">
+            <Menu/>
+          </RequireAuth>
+        }/>
 
         <Route
         path="/order"
-        element={<Order/>}/>
+        element={
+          <RequireAuth loginPath="/">
+            <Order/>
+          </RequireAuth>}/>
 
         <Route
         path="/checkout"
-        element={<Checkout/>}/>
+        element={
+          <RequireAuth loginPath="/">
+            <Checkout/>
+          </RequireAuth>
+        }/>
 
         <Route
         path="*"
