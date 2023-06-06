@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import OrderService from '../services/OrderService';
 import OrderProductCard from '../components/OrderProductCard';
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Order() {
     const [order, setOrder] = useState([])
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         setOrder(OrderService.getOrder());

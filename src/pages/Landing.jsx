@@ -4,11 +4,7 @@ import OrderService from '../services/OrderService';
 
 function Landing() {
 
-    const [order, setOrder] = useState([])
-
-    useEffect(() => {
-        setOrder(OrderService.getFavs());
-    }, [])
+    const [order, setOrder] = useState(OrderService.getFavs())
 
     function showAddPopup()
     {
@@ -22,8 +18,8 @@ function Landing() {
 
     return ( 
         <div className="landing-container">
-            <h1>Welcome 'username'!</h1>
-            <h3>Here are your favorites:</h3>
+            <h1>Welcome!</h1>
+            <h3>Here are some favorites:</h3>
             <div className="favorite-container">
                 {
                     order.map((p) => (

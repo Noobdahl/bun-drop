@@ -74,7 +74,7 @@ function Checkout() {
         {
             let orderModel = {
                 order: order,
-                user: {id: 1, name: "micke"}
+                user: {id: 1, name: sessionStorage.getItem("user_name")}
             }
             OrderService.saveOrderToDb(orderModel)
         }
@@ -112,13 +112,12 @@ function Checkout() {
         <div className="checkout-container">
 
             <dialog data-modal-req>
-            <div className="confirmation-modal-container">
-
-                <h2>Something went wrong!</h2>
-                <div className="confirm-info">
-                    <em>{errMsg}</em>
-                </div>
-                <button className="product-card-order-btn glow-on-hover button-lightup" data-close-modal onClick={closeReqModal}>Close</button>
+                <div className="confirmation-modal-container">
+                    <h2>Something went wrong!</h2>
+                    <div className="confirm-info">
+                        <em>{errMsg}</em>
+                    </div>
+                    <button className="product-card-order-btn glow-on-hover button-lightup" data-close-modal onClick={closeReqModal}>Close</button>
                 </div>
             </dialog>
 

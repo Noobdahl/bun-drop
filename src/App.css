@@ -66,6 +66,9 @@ body {
 .button-lightup:active{
     border-color:white;
 }
+.add-pointer:hover {
+    cursor: pointer;
+}
 
 @media screen and (max-width: 1000px) {
     html {
@@ -142,6 +145,7 @@ body {
 }
 #fav-btn {
     width: 10rem;
+    cursor: pointer;
 }
 
 /* Menu page */
@@ -198,6 +202,7 @@ body {
     border-radius: 1.5rem;
     border-style: solid;
     background-color: #2A0D12;
+    cursor: pointer;
 }
 .product-card h1, h3 {
     font-size: 3rem;
@@ -211,6 +216,7 @@ body {
     font-size: 3rem;
     font-style: italic;
     margin: auto;
+    color: white;
 }
 .dynamic-search::placeholder {
     color: white;
@@ -285,6 +291,7 @@ body {
     border-radius: 1.5rem;
     border-style: solid;
     background-color: #2A0D12;
+    cursor: pointer;
 }
 
 
@@ -434,6 +441,10 @@ dialog {
     display: none;
 }
 
+.visible {
+    display: block;
+}
+
 .big-btn {
     width: 40rem !important;
     height: 10rem;
@@ -457,4 +468,57 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+
+/* Login Page */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-weight: bolder;
+    width: 60rem;
+    height: 80rem;
+    margin: auto;
+    font-size: 4rem;
+    color: white;
+}
+.login-form button {
+    background-color: #49111C;
+    font-size: 2rem;
+}
+.login-form input {
+    width: 30rem;
+    padding: 0.3rem;
+    font-size: 3rem;
+    border-radius: 10px;
+    color:#2A0D12;
+    opacity: 0.75;
+}
+.login-form img {
+    width: 35rem;
+    mix-blend-mode: color-burn;
+}
+.login-bot{
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.login-bot:hover {
+    cursor: pointer;
+}
+
+/* Register Page */
+
+.register-modal-container {
+    opacity: 0.95;
+}
+
+/* Logout button */
+#logout-btn {
+    background-color: #5f1826;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 1rem;
 }

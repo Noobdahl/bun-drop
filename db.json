@@ -69,8 +69,7 @@
       "price": 3.99,
       "image": "fries-1.png",
       "category": "Misc"
-    }
-    ,
+    },
     {
       "id": 11,
       "name": "Sweet fries",
@@ -84,8 +83,7 @@
       "price": 4.99,
       "image": "milkshake-1.png",
       "category": "Drinks"
-    }
-    ,
+    },
     {
       "id": 13,
       "name": "Friba",
@@ -120,7 +118,38 @@
       "id": 1,
       "username": "admin",
       "password": "password"
+    },
+    {
+      "username": "user",
+      "password": "password",
+      "id": 2
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "order": [
+        {
+          "id": 16,
+          "name": "Positive Energy",
+          "price": 2.49,
+          "image": "soda-4.png",
+          "category": "Drinks",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "El' Nagas",
+          "price": 2.99,
+          "image": "burger-2.png",
+          "category": "Burgers",
+          "quantity": 2
+        }
+      ],
+      "user": {
+        "id": 1,
+        "name": "admin"
+      },
+      "id": 1
+    }
+  ]
 }
