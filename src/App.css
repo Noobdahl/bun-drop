@@ -1,38 +1,460 @@
-.App {
-  text-align: center;
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: "Courier New";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
+    color:white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    font-size: 62.5%;
+    background-color: #6d5459;
+    color: white;
+    /* Same as font-size:10px; use percentage instead for allowing people who use visual help w increased font-size to properly see page */
+    /* Is set to 62.5% using this formula : default font-size is 16px while We want 10px. 10/16 = 0.625 aka 62.5 % */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+button {
+    color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+    /* All default font properties for the application here, font-size, family, weight, line-height, color etc. */
+    box-sizing: border-box;
+} 
+
+
+.bg {
+    background: url("../src/images/bgrestaurant.png") no-repeat center center fixed;
+    background-size:cover;
+    opacity: 0.5;
+    position: fixed;
+    top: 7rem;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index:-1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-outline {
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.glow-on-hover:hover {
+    transition: box-shadow 0.05s ease;
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.5);
+    opacity: 0.8;
+}
+.underline-on-hover:hover {
+    transition: border-bottom 0.05s ease;
+    border-bottom:2px solid white;
+}
+.underline {
+    border-bottom:2px solid white;
+}
+.justify-end {
+    justify-self: end;
+}
+
+.button-lightup:active{
+    border-color:white;
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 31.25%;
+        /* Same as font-size : 5px; */
+    }
+}
+
+.main {
+    margin-top: 10rem;
+}
+
+/* Navbar */
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    place-items: center;
+    background-color: #49111C;
+    border-bottom: 2px solid #0A0908;
+    height: 7rem;
+    width: 100%;
+    font-size: 2.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+}
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    width: 23rem;
+    justify-content: space-between;
+}
+
+.drone-logo {
+    mix-blend-mode: color-burn;
+    width: 8rem;
+}
+
+/* Landing page */
+
+.landing-container {
+    font-size: 3rem;
+    text-align: center;
+    margin: auto;
+    margin-top: 5rem;
+    width: 75%;
+}
+
+.favorite-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    flex-wrap: wrap;
+    place-items: center;
+    width: 100%;
+    margin: auto;
+}
+.favorite-container div div {
+    width: 25rem;
+    background-color: #6d5459;
+}
+.favorite-container div h1 {
+    font-size: 2rem;
+}
+.favorite-container div h3 {
+    font-size: 2rem;
+}
+.favorite-container div #fav-btn {
+    display: none;
+}
+.favorite-container div span {
+    color: red;
+    font-weight: bold;
+}
+#fav-btn {
+    width: 10rem;
+}
+
+/* Menu page */
+
+.menu-filter-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 4rem;
+    margin: auto;
+    margin-top: 5rem;
+    width: 50%;
+}
+
+.menu-filter-container span {
+    font-weight: bolder;
+    height: 5rem;
+}
+
+.product-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    flex-wrap: wrap;
+    place-items: center;
+    width: 75%;
+    margin: auto;
+    font-size: 2rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #49111C;
+    width: 40rem;
+    height: 40rem;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    border: 1rem solid #2A0D12;
+    border-radius: 25px;
+    opacity: 0.95;
+}
+.product-card img{
+    width: 20rem;
+    border: 0.5rem solid #2A0D12;
+    border-radius: 1.5rem;
+}
+.product-card-order-btn {
+    width: 20rem;
+    height: 3rem;
+    border-color: black;
+    border-radius: 1.5rem;
+    border-style: solid;
+    background-color: #2A0D12;
+}
+.product-card h1, h3 {
+    font-size: 3rem;
+    word-spacing: -1rem;
+}
+
+.dynamic-search {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    font-size: 3rem;
+    font-style: italic;
+    margin: auto;
+}
+.dynamic-search::placeholder {
+    color: white;
+}
+.dynamic-search:focus {
+    outline: none;
+}
+.search {
+    margin: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Order page */
+
+.order-site-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: start center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.order-card-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 10rem;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    width: 50rem;
+}
+
+.order-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    place-items: start start;
+    background-color: #49111C;
+    opacity: 0.9;
+    border: 0.5rem solid #2A0D12;
+    border-radius: 25px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+.order-card img {
+    border: 5px solid rgba(0,0,0,0.5);
+    border-radius: 25px;
+    width: 10rem;
+}
+.order-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+.order-card-price-btns {
+    display:flex;
+    align-items: center;
+    width: 75%;
+    justify-content: space-evenly;
+}
+.order-card-btn {
+    width: 4rem;
+    height: 4rem;
+    color: white;
+    border-color: black;
+    border-radius: 1.5rem;
+    border-style: solid;
+    background-color: #2A0D12;
+}
+
+
+.order-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #49111C;
+    opacity: 0.9;
+    width: 40rem;
+    min-height: 10rem;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    border: 0.5rem solid #2A0D12;
+    border-radius: 25px;
+    color: white;
+}
+
+.order-summary-topbox {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.summary-order-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    font-size: 2rem;
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+    padding-top: 0.3rem;
+    width: 100%;
+}
+
+/* Checkout page */
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #49111C;
+    position: absolute;
+    border: 0.8rem solid #2A0D12;
+    border-radius: 3rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100rem;
+    height: 75%;
+}
+
+.checkout-top-part {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    place-items: start center;
+    margin: 10rem;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.checkout-input {
+    display: inline-block;
+    width: 26rem;
+    border: none;
+    background-color: #9E8388;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    height: 4rem;
+    margin: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+.checkout-input::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.fake-input {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    border: none;
+    background-color: #9E8388;
+    border-radius: 1.5rem;
+    height: 4rem;
+    margin: 2rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.fake-input img {
+    width: 12rem;
+    height: 8rem;
+}
+.mastercard img {
+    width: 8rem;
+    height: 5rem;
+}
+.mastercard h2{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 2.1rem;
+    letter-spacing: 0.1rem;
+}
+
+.checkout-checkbox {
+    margin-left: 1rem;
+    height: 2rem;
+}
+
+/* Confirmation Modal */
+
+.confirmation-modal-container {
+    width: 60rem;
+    height: 60rem;
+    color: white;
+    font-size: 2rem;
+}
+
+dialog {
+    position: fixed;
+    background: #5f1826;
+    border: 1rem solid #2A0D12;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.confirmation-modal-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: start start;
+    padding: 5rem;
+    gap: 1rem;
+}
+
+.confirm-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.big-btn {
+    width: 40rem !important;
+    height: 10rem;
+    font-size: 3rem;
+}
+
+/* Add Modal */
+
+.added-modal-container {
+    display: grid;
+    place-items: center center;
+    gap: 2rem;
+    padding: 5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* To remove arrows in inputs with number types */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

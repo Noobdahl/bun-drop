@@ -1,0 +1,126 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Bacon Mc Rabbit",
+      "price": 7.99,
+      "image": "burger-1.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 2,
+      "name": "El' Nagas",
+      "price": 2.99,
+      "image": "burger-2.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 3,
+      "name": "Sloppy Tower",
+      "price": 8.99,
+      "image": "burger-3.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 4,
+      "name": "Saggy Freckles",
+      "price": 4.99,
+      "image": "burger-4.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 5,
+      "name": "Tower Mc Piza",
+      "price": 29.99,
+      "image": "burger-5.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 6,
+      "name": "Sloppy Joe",
+      "price": 19.99,
+      "image": "burger-6.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 7,
+      "name": "Dry Oasis Mc Feast",
+      "price": 39.99,
+      "image": "burger-7.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 8,
+      "name": "Gushing Bacon",
+      "price": 8.99,
+      "image": "burger-8.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 9,
+      "name": "Mission Overload",
+      "price": 14.99,
+      "image": "burger-9.png",
+      "category": "Burgers"
+    },
+    {
+      "id": 10,
+      "name": "French fries",
+      "price": 3.99,
+      "image": "fries-1.png",
+      "category": "Misc"
+    }
+    ,
+    {
+      "id": 11,
+      "name": "Sweet fries",
+      "price": 4.99,
+      "image": "fries-2.png",
+      "category": "Misc"
+    },
+    {
+      "id": 12,
+      "name": "Lux-shake",
+      "price": 4.99,
+      "image": "milkshake-1.png",
+      "category": "Drinks"
+    }
+    ,
+    {
+      "id": 13,
+      "name": "Friba",
+      "price": 2.49,
+      "image": "soda-1.png",
+      "category": "Drinks"
+    },
+    {
+      "id": 14,
+      "name": "Olipop",
+      "price": 2.49,
+      "image": "soda-2.png",
+      "category": "Drinks"
+    },
+    {
+      "id": 15,
+      "name": "Calpis Wasser",
+      "price": 2.49,
+      "image": "soda-3.png",
+      "category": "Drinks"
+    },
+    {
+      "id": 16,
+      "name": "Positive Energy",
+      "price": 2.49,
+      "image": "soda-4.png",
+      "category": "Drinks"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "password"
+    }
+  ],
+  "orders": []
+}
