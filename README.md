@@ -27,3 +27,5 @@ Bun Drop is a React-based web application that simulates a futuristic burger ord
 - I chose early on to use css and classes to style the app. Mainly because i find it easier to try different looks, since the syntax changed when using reacts styling-syntax.
 
 - Initially I was focused on separating my logic to the OrderService, but unfortunately I got into my bad habit of just mashing code for longer periods of time and create a mess in the components instead. There is alot of cleaning up and optimizing to do.
+
+- Colors came from a palette i chose in the early stage of designing in figma: [https://coolors.co/palette/0a0908-2a0d12-49111c-9e8388-f2f4f3-a9927d](https://coolors.co/palette/0a0908-2a0d12-49111c-9e8388-f2f4f3-a9927d)
