@@ -55,7 +55,8 @@ function Navbar() {
             </div>
 
             <div>
-                <button id="logout-btn" className={isSignedIn ? 'visible' : 'hidden'} onClick={handleLogout}>Logout</button>
+                {/* <button id="logout-btn" className={isSignedIn ? 'visible' : 'hidden'} onClick={handleLogout}>Logout</button> */}
+                <button id="logout-btn"  onClick={handleLogout}>Logout</button>
             </div>
             
             {/* <div>

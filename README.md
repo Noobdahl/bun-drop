@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Bun Drop - a React project by M. Nordahl
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bun Drop is a React-based web application that simulates a futuristic burger ordering experience. With Bun Drop, users can browse a menu of delicious burgers and place orders that are delivered by flying drones. The app also provides features like adding favorites and a seamless checkout process for a convenient and enjoyable ordering experience.
 
-## Available Scripts
+## Install and startup
 
-In the project directory, you can run:
+1. Install the dependencies: **npm install**
+2. Launch the json-server: **npm run json**
+3. Launch the app: **npm start**
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Burger Menu**: Browse a wide range of delicious burgers, each with detailed descriptions and prices.
+- **Add to Favorites**: Mark your favorite burgers for quick access and future orders.
+- **Flying Drones**: Experience the thrill of drone delivery as your ordered burgers are brought to your location.
+- **Seamless Checkout**: Easily review your order, select payment options, and complete the purchase process.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## My learning process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- When working on how to keep track of the order i first started working on saving all order objects in an array with useState. But after a short while I realized that the order would disappear when re-joining the app or interacting between pages, so i decided to use localStorage.
 
-### `npm run build`
+- When saving order in localStorage i also decided to add the quantity-property to the objects right when i put them inside the localStorage. In that way i could do a simple check when incrementing/decrementing duplicate items in the order, and just add to quantity if it already existed. I am very pleased with the result.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- I had some issues in the last phase of the project, when adding users and authorizing on pages. For some reason the useEffect/useStates got infinitely looped when using <Link>s to orient between pages. When i changed to the similar useNavigate all issues went away.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- I chose early on to use css and classes to style the app. Mainly because i find it easier to try different looks, since the syntax changed when using reacts styling-syntax.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Initially I was focused on separating my logic to the OrderService, but unfortunately I got into my bad habit of just mashing code for longer periods of time and create a mess in the components instead. There is alot of cleaning up and optimizing to do.

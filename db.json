@@ -150,6 +150,47 @@
         "name": "admin"
       },
       "id": 1
+    },
+    {
+      "order": [
+        {
+          "id": 2,
+          "name": "El' Nagas",
+          "price": 2.99,
+          "image": "burger-2.png",
+          "category": "Burgers",
+          "quantity": 1
+        },
+        {
+          "id": 1,
+          "name": "Bacon Mc Rabbit",
+          "price": 7.99,
+          "image": "burger-1.png",
+          "category": "Burgers",
+          "quantity": 2
+        },
+        {
+          "id": 12,
+          "name": "Lux-shake",
+          "price": 4.99,
+          "image": "milkshake-1.png",
+          "category": "Drinks",
+          "quantity": 2
+        },
+        {
+          "id": 11,
+          "name": "Sweet fries",
+          "price": 4.99,
+          "image": "fries-2.png",
+          "category": "Misc",
+          "quantity": 3
+        }
+      ],
+      "user": {
+        "id": 1,
+        "name": "admin"
+      },
+      "id": 2
     }
   ]
 }
